@@ -22,9 +22,8 @@ namespace RealsenseTest
 
                 return depth.GetDistance(depth.Width / 2, depth.Height / 2);
             }
-
-
         }
+
         public bool distCheck(float depth)
         {
 
