@@ -15,9 +15,9 @@ namespace RealsenseTest
                     Camera1.checkDepth() + " meters away\t");
 
                 if (Camera1.distCheck(Camera1.checkDepth()) == false)
-                    Console.WriteLine("The camera is not far enough");
+                    Console.WriteLine("The camera is not far enough from object");
                 else
-                    Console.WriteLine("The camera is far enough");
+                    Console.WriteLine("The camera is far enough the object");
             }
         }
     }
