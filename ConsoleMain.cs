@@ -1,4 +1,4 @@
-﻿using Intel.RealSense;
+﻿
 using System;
 
 namespace RealsenseTest
@@ -11,13 +11,18 @@ namespace RealsenseTest
 
             while (true)
             {
-                Console.WriteLine("The camera is pointing at an object " +
-                    Camera1.checkDepth() + " meters away\t");
-
-                if (Camera1.distCheck(Camera1.checkDepth()) == false)
-                    Console.WriteLine("The camera is not far enough from object");
+                float depth = Camera1.CheckDepth();
+                Console.WriteLine("The camera is pointing at an object " + depth + " meters away\t\n");
+                
+                if (Camera1.DistCheck(depth) == false)
+                {
+                    Console.WriteLine("The camera is not far enough from object \n");
+                }
                 else
-                    Console.WriteLine("The camera is far enough the object");
+                {
+                    Console.WriteLine("The camera is far enough the object \n");
+                }
+                    
             }
         }
     }
